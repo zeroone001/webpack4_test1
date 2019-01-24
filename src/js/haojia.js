@@ -1,3 +1,3 @@
-require('css/index.scss');
+// require('css/index.scss');
 
-console.log('haojia');
+console.log('haojiaewqeqw');

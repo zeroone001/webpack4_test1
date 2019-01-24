@@ -1,2 +1,2 @@
 require('css/index.scss');
-console.log('testtest');
+console.log('testtesdadsadsdsdasdt');

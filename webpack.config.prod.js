@@ -21,57 +21,7 @@ module.exports = {
     stats: {
         colors: true
     },
-    devServer: {
-        host: 'localhost',
-        hot: true,
-        open: true,
-        // hotOnly:true,
-        contentBase: path.join(__dirname, 'dist'),
-        watchContentBase: true,
-        disableHostCheck: true,
-        compress: true,
-        overlay: {
-            warnings: true,
-            errors: true
-        },
-        port: 8083,
-        stats: {
-            colors: true,
-            chunks: false,
-            children: false,
-            entrypoints: false,
-            modules: false
-        },
-        // before: function (app, server) {
-        //     app.get('/', (req, res) => {
-        //         var resHtml = `<!DOCTYPE html>
-        //         <html lang="en">
-        //         <head>
-        //             <meta charset="UTF-8">
-        //             <title>index</title>
-        //         </head>
-        //         <body>
-        //             <ul>`;
-                
-        //             resHtml += `<li><a href="page/index.html">pages/index.html</a></li>`;
-                
-        //         resHtml += `</ul>
-        //         </body>
-        //         </html>`;
-        //         res.send(resHtml);
-        //     });
-        //     const chokidar = require('chokidar');
-        //     const files = [path.join(__dirname, 'src/tpl/**/*.ejs')];
-        //     const options = {
-        //         followSymlinks: false,
-        //         depth: 5
-        //     };
-        //     let watcher = chokidar.watch(files, options);
-        //     watcher.on('all', _ => {
-        //         server.sockWrite(server.sockets, 'content-changed');
-        //     });
-        // }
-    },
+   
     resolve: {
         alias: {
             js: resolvePath('src/js'),
@@ -140,10 +90,9 @@ module.exports = {
     plugins: [
         // 注意这里不能写[hash]，否则无法实现热跟新 filename: "css/[name].[contenthash:7].css"
         new MiniCssExtractPlugin({
-            filename: "css/[name].css"
+            filename: "css/[name].[contenthash:7].css"
         }),
-        new webpack.HotModuleReplacementPlugin(), 
-        new webpack.NamedModulesPlugin(), //模块热更新
+       
         new HtmlWebpackPlugin({
             template: resolvePath('src/tpl/index.html'),
             filename: resolvePath('dist/page/index.html'),
