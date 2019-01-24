@@ -21,27 +21,28 @@ module.exports = {
     stats: {
         colors: true
     },
+    mode: 'development',
     devServer: {
-        host: 'localhost',
+        host: '0.0.0.0',
         hot: true,
         open: true,
         // hotOnly:true,
         contentBase: path.join(__dirname, 'dist'),
+        // 告诉dev server监视dev server.contentbase选项提供的文件。
+        // 默认情况下禁用。启用后，文件更改将触发整页重新加载。
         watchContentBase: true,
+        // 当设置为true时，此选项将绕过主机检查。
+        // 不建议这样做，因为不检查主机的应用程序容易受到DNS重新绑定攻击。
         disableHostCheck: true,
+        // 打开Gzip压缩
         compress: true,
+        // 当存在编译器错误或警告时，在浏览器中显示全屏覆盖。
         overlay: {
             warnings: true,
             errors: true
         },
         port: 8083,
-        stats: {
-            colors: true,
-            chunks: false,
-            children: false,
-            entrypoints: false,
-            modules: false
-        },
+        stats: 'errors-only',
         // before: function (app, server) {
         //     app.get('/', (req, res) => {
         //         var resHtml = `<!DOCTYPE html>
@@ -92,6 +93,7 @@ module.exports = {
             {
                 test: /\.(c|sa|sc)ss$/,
                 exclude: /node_modules/,
+                include: resolvePath('src'),
                 use: [
                     'css-hot-loader',
                     MiniCssExtractPlugin.loader,
@@ -142,8 +144,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/[name].css"
         }),
+        // HMR 热替换
         new webpack.HotModuleReplacementPlugin(), 
-        new webpack.NamedModulesPlugin(), //模块热更新
+        // 此插件将导致启用HMR时显示模块的相对路径
+        new webpack.NamedModulesPlugin(), 
         new HtmlWebpackPlugin({
             template: resolvePath('src/tpl/index.html'),
             filename: resolvePath('dist/page/index.html'),

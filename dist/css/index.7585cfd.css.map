@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/css/index.scss"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA,C","file":"css/index.7585cfd.css","sourcesContent":[".test-css {\n    width: 100px;\n    height: 100px;\n    background: url(https://res.smzdm.com/mobile/wap_v2/dist/img/smzdm_178.6318e4b.jpg) 0 0 no-repeat;\n}"],"sourceRoot":""}
