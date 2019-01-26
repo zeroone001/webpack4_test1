@@ -5,6 +5,8 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 const argv = require('yargs').argv;
+const CopyWebpackPlugin = require('copy-webpack-plugin');                       
+
 const resolvePath = (_src) => {
     return path.resolve(__dirname, './', _src);
 }
@@ -16,7 +18,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].[hash:7].js',
+        filename: 'js/[name].[chunkhash:7].js',
         publicPath: '../'
     }, 
     devtool: _mode ? '' : 'source-map',
@@ -25,14 +27,26 @@ module.exports = {
     },
     mode: "production",
     // 新的公共代码抽取工具
+    // uglifyjs-webpack-plugin 是依赖于uglify-js@3 的，compress配置可以在这里查到
+    // uglifyjs-webpack-plugin 里面有些配置写的不是很清楚 
     optimization: {
         minimizer: [
             // new OptimizeCssAssetsPlugin({})
             new UglifyJsPlugin({
                 test: /\.js(\?.*)?$/i,
                 cache: true,
+                // 使用多进程并行运行来提高构建速度。默认并发运行数
                 parallel: true,
-                sourceMap: true // set to true if you want JS source maps
+                uglifyOptions: {
+                    compress:{
+                        drop_console: true,
+                        drop_debugger: true, // 默认就是true
+                        // 已经压缩过的代码，不再压缩，特别是echarts
+                        unused: false
+                    }
+                }
+                
+                // sourceMap: true // set to true if you want JS source maps
             })
 
         ],
@@ -126,7 +140,7 @@ module.exports = {
                         loader: 'url-loader',
                         options: {
                             limit: 10000,
-                            name: 'img/[name].[hash:7].[ext]',
+                            name: 'img/[name].[ext]',
                             publicPath: 'https://res.smzdm.com/mobile/wap_v2/dist'
                         }
                     }
@@ -150,6 +164,14 @@ module.exports = {
             },
             canPrint: true
         }),
+        // 将单个文件或整个目录复制到生成目录
+        new CopyWebpackPlugin([
+            {
+                from: path.join(__dirname, 'src/img'),
+                to: 'img'
+            }
+        ],{}),
+        
         new HtmlWebpackPlugin({
             template: resolvePath('src/tpl/index.html'),
             filename: resolvePath('dist/page/index.html'),
