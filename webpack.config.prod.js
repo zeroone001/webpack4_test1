@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
@@ -16,13 +17,59 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/[name].[hash:7].js',
-        publicPath: '/'
+        publicPath: '../'
     }, 
     devtool: _mode ? '' : 'source-map',
     stats: {
         colors: true
     },
-   
+    mode: "production",
+    // 新的公共代码抽取工具
+    optimization: {
+        minimizer: [
+            // new OptimizeCssAssetsPlugin({})
+            new UglifyJsPlugin({
+                test: /\.js(\?.*)?$/i,
+                cache: true,
+                parallel: true,
+                sourceMap: true // set to true if you want JS source maps
+            })
+
+        ],
+        // webpack4移除了CommonsChunkPlugin插件，取而代之的是splitChunks
+        splitChunks: {
+            chunks: 'all',
+            minSize: 1,
+            maxSize: 0,
+            minChunks: 1,
+            // 按需加载时并行请求的最大数目。
+            // maxAsyncRequests（最大的异步请求数）和maxInitialRequests（最大的初始请求数）
+            // 这两个参数则是为了限制代码块划分的过于细致，导致大量的文件请求。
+            maxAsyncRequests: 5,
+            maxInitialRequests: 2,
+            name: false,
+            cacheGroups: {
+                commons: {
+                    name: 'commons',
+                    minChunks: 2,
+                    // 这个配置允许我们使用已经存在的代码块
+                    reuseExistingChunk: true,
+                    priority: -10
+                },
+                // commonsCss: {
+                //     name: 'commons',
+                //     minChunks: 2,
+                //     reuseExistingChunk: true,
+                //     priority: -20
+                // }
+            }
+        },
+        // 将webpack生成的 runtime 作为独立 chunk ，
+        // runtime包含在模块交互时，模块所需的加载和解析逻辑（manifest）
+        runtimeChunk: {
+            name: 'manifest'
+        }
+    },
     resolve: {
         alias: {
             js: resolvePath('src/js'),
@@ -93,17 +140,26 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/[name].[contenthash:7].css"
         }),
-       
+        // 压缩CSS
+        new OptimizeCssAssetsPlugin({
+            // 这个不加也可以，默认就是这个
+            assetNameRegExp: /\.css$/g,
+            cssProcessor: require('cssnano'),
+            cssProcessorPluginOptions: {
+                preset: ['default', { discardComments: { removeAll: true } }],
+            },
+            canPrint: true
+        }),
         new HtmlWebpackPlugin({
             template: resolvePath('src/tpl/index.html'),
             filename: resolvePath('dist/page/index.html'),
-            chunks: ['index'],
+            chunks: ['manifest','commons', 'index'],
             chunksSortMode: 'dependency'
         }),
         new HtmlWebpackPlugin({
             template: resolvePath('src/tpl/haojia.html'),
             filename: resolvePath('dist/page/haojia.html'),
-            chunks: ['haojia'],
+            chunks: ['manifest','commons','haojia'],
             chunksSortMode: 'dependency'
         })
         

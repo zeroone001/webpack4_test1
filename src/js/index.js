@@ -1,2 +1,4 @@
 require('css/index.scss');
-console.log('testtesdadsadsdsdasdt');
+
+require('js/components/test.js');
+console.log('index.js,test');

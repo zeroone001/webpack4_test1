@@ -1,3 +1,3 @@
 // require('css/index.scss');
-
-console.log('haojiaewqeqw');
+require('js/components/test.js');
+console.log('haojia, test.js');
