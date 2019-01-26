@@ -146,8 +146,8 @@ module.exports = {
         }),
         // HMR 热替换
         new webpack.HotModuleReplacementPlugin(), 
-        // 此插件将导致启用HMR时显示模块的相对路径
-        new webpack.NamedModulesPlugin(), 
+        // 此插件将导致启用HMR时显示模块的相对路径， 默认就有，不用加
+        // new webpack.NamedModulesPlugin(), 
         new HtmlWebpackPlugin({
             template: resolvePath('src/tpl/index.html'),
             filename: resolvePath('dist/page/index.html'),

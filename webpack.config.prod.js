@@ -5,7 +5,8 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 const argv = require('yargs').argv;
-const CopyWebpackPlugin = require('copy-webpack-plugin');                       
+const CopyWebpackPlugin = require('copy-webpack-plugin');       
+const WebpackManifestPlugin = require('webpack-manifest-plugin');                
 
 const resolvePath = (_src) => {
     return path.resolve(__dirname, './', _src);
@@ -32,6 +33,7 @@ module.exports = {
     optimization: {
         minimizer: [
             // new OptimizeCssAssetsPlugin({})
+            // new UglifyJsPlugin()，这个插件我们可以在optimize中配置，效果是一样的
             new UglifyJsPlugin({
                 test: /\.js(\?.*)?$/i,
                 cache: true,
@@ -171,7 +173,12 @@ module.exports = {
                 to: 'img'
             }
         ],{}),
-        
+        new WebpackManifestPlugin({
+            publicPath: '',
+            filter: function (FileDescriptor) {
+                return FileDescriptor.isChunk;
+            }
+        }),
         new HtmlWebpackPlugin({
             template: resolvePath('src/tpl/index.html'),
             filename: resolvePath('dist/page/index.html'),
