@@ -2,18 +2,18 @@
   "errors": [],
   "warnings": [],
   "version": "4.29.0",
-  "hash": "574586aae94241c60f01",
-  "time": 2175,
-  "builtAt": 1548491892598,
+  "hash": "971e9fec17c7266fbf60",
+  "time": 2888,
+  "builtAt": 1548573583648,
   "publicPath": "../",
   "outputPath": "/Users/smzdm/webpack4_test1/dist",
   "assetsByChunkName": {
-    "commons": "js/commons.10230a1.js",
-    "manifest": "js/manifest.d72142d.js",
-    "haojia": "js/haojia.03cc936.js",
+    "commons": "js/commons.f050e44.js",
+    "manifest": "js/manifest.00d5c31.js",
+    "haojia": "js/haojia.c52310a.js",
     "index": [
       "css/index.db89ed7.css",
-      "js/index.f199040.js"
+      "js/index.54b313d.js"
     ]
   },
   "assets": [
@@ -43,7 +43,7 @@
       "emitted": true
     },
     {
-      "name": "js/commons.10230a1.js",
+      "name": "js/commons.f050e44.js",
       "size": 78,
       "chunks": [
         0
@@ -54,7 +54,7 @@
       "emitted": true
     },
     {
-      "name": "js/haojia.03cc936.js",
+      "name": "js/haojia.c52310a.js",
       "size": 107,
       "chunks": [
         2
@@ -65,7 +65,7 @@
       "emitted": true
     },
     {
-      "name": "js/index.f199040.js",
+      "name": "js/index.54b313d.js",
       "size": 134,
       "chunks": [
         3
@@ -76,7 +76,7 @@
       "emitted": true
     },
     {
-      "name": "js/manifest.d72142d.js",
+      "name": "js/manifest.00d5c31.js",
       "size": 1456,
       "chunks": [
         1
@@ -88,7 +88,7 @@
     },
     {
       "name": "manifest.json",
-      "size": 382,
+      "size": 202,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
@@ -117,10 +117,10 @@
         3
       ],
       "assets": [
-        "js/manifest.d72142d.js",
-        "js/commons.10230a1.js",
+        "js/manifest.00d5c31.js",
+        "js/commons.f050e44.js",
         "css/index.db89ed7.css",
-        "js/index.f199040.js"
+        "js/index.54b313d.js"
       ],
       "children": {},
       "childAssets": {}
@@ -132,9 +132,9 @@
         2
       ],
       "assets": [
-        "js/manifest.d72142d.js",
-        "js/commons.10230a1.js",
-        "js/haojia.03cc936.js"
+        "js/manifest.00d5c31.js",
+        "js/commons.f050e44.js",
+        "js/haojia.c52310a.js"
       ],
       "children": {},
       "childAssets": {}
@@ -148,10 +148,10 @@
         3
       ],
       "assets": [
-        "js/manifest.d72142d.js",
-        "js/commons.10230a1.js",
+        "js/manifest.00d5c31.js",
+        "js/commons.f050e44.js",
         "css/index.db89ed7.css",
-        "js/index.f199040.js"
+        "js/index.54b313d.js"
       ],
       "children": {},
       "childAssets": {}
@@ -163,9 +163,9 @@
         2
       ],
       "assets": [
-        "js/manifest.d72142d.js",
-        "js/commons.10230a1.js",
-        "js/haojia.03cc936.js"
+        "js/manifest.00d5c31.js",
+        "js/commons.f050e44.js",
+        "js/haojia.c52310a.js"
       ],
       "children": {},
       "childAssets": {}
@@ -183,9 +183,9 @@
         "commons"
       ],
       "files": [
-        "js/commons.10230a1.js"
+        "js/commons.f050e44.js"
       ],
-      "hash": "10230a10c6a5bfd90fe3",
+      "hash": "f050e443855c91b8d77d",
       "siblings": [
         1,
         2,
@@ -197,7 +197,7 @@
       "modules": [
         {
           "id": 0,
-          "identifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/components/test.js",
+          "identifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/components/test.js",
           "name": "./src/js/components/test.js",
           "index": 3,
           "index2": 2,
@@ -209,23 +209,23 @@
           "chunks": [
             0
           ],
-          "issuer": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+          "issuer": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
           "issuerId": 1,
           "issuerName": "./src/js/index.js",
           "issuerPath": [
             {
               "id": 1,
-              "identifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+              "identifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
               "name": "./src/js/index.js",
               "profile": {
-                "factory": 297,
-                "building": 528
+                "factory": 69,
+                "building": 411
               }
             }
           ],
           "profile": {
-            "factory": 102,
-            "building": 686
+            "factory": 106,
+            "building": 834
           },
           "failed": false,
           "errors": 0,
@@ -234,7 +234,7 @@
           "reasons": [
             {
               "moduleId": 1,
-              "moduleIdentifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+              "moduleIdentifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
               "module": "./src/js/index.js",
               "moduleName": "./src/js/index.js",
               "type": "cjs require",
@@ -243,7 +243,7 @@
             },
             {
               "moduleId": 3,
-              "moduleIdentifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/haojia.js",
+              "moduleIdentifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/haojia.js",
               "module": "./src/js/haojia.js",
               "moduleName": "./src/js/haojia.js",
               "type": "cjs require",
@@ -290,9 +290,9 @@
         "manifest"
       ],
       "files": [
-        "js/manifest.d72142d.js"
+        "js/manifest.00d5c31.js"
       ],
-      "hash": "d72142d04f5b254194d2",
+      "hash": "00d5c313337ef2e81ff5",
       "siblings": [
         0,
         2,
@@ -332,9 +332,9 @@
         "haojia"
       ],
       "files": [
-        "js/haojia.03cc936.js"
+        "js/haojia.c52310a.js"
       ],
-      "hash": "03cc93622098b3e53ab3",
+      "hash": "c52310a1b65976c812a3",
       "siblings": [
         0,
         1
@@ -345,7 +345,7 @@
       "modules": [
         {
           "id": 3,
-          "identifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/haojia.js",
+          "identifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/haojia.js",
           "name": "./src/js/haojia.js",
           "index": 4,
           "index2": 4,
@@ -362,9 +362,9 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 346,
-            "building": 539,
-            "dependencies": 19
+            "factory": 88,
+            "building": 395,
+            "dependencies": 72
           },
           "failed": false,
           "errors": 0,
@@ -413,9 +413,9 @@
       ],
       "files": [
         "css/index.db89ed7.css",
-        "js/index.f199040.js"
+        "js/index.54b313d.js"
       ],
-      "hash": "f19904000bfa8df386cf",
+      "hash": "54b313de6a4a062b9e28",
       "siblings": [
         0,
         1
@@ -426,7 +426,7 @@
       "modules": [
         {
           "id": 1,
-          "identifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+          "identifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
           "name": "./src/js/index.js",
           "index": 0,
           "index2": 3,
@@ -443,8 +443,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 297,
-            "building": 528
+            "factory": 69,
+            "building": 411
           },
           "failed": false,
           "errors": 0,
@@ -483,23 +483,23 @@
           "chunks": [
             3
           ],
-          "issuer": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+          "issuer": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
           "issuerId": 1,
           "issuerName": "./src/js/index.js",
           "issuerPath": [
             {
               "id": 1,
-              "identifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+              "identifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
               "name": "./src/js/index.js",
               "profile": {
-                "factory": 297,
-                "building": 528
+                "factory": 69,
+                "building": 411
               }
             }
           ],
           "profile": {
-            "factory": 102,
-            "building": 686
+            "factory": 106,
+            "building": 834
           },
           "failed": false,
           "errors": 0,
@@ -510,7 +510,7 @@
           "reasons": [
             {
               "moduleId": 1,
-              "moduleIdentifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+              "moduleIdentifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
               "module": "./src/js/index.js",
               "moduleName": "./src/js/index.js",
               "type": "cjs require",
@@ -524,7 +524,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 1,
-          "source": "// extracted by mini-css-extract-plugin\n    if(module.hot) {\n      // 1548491892085\n      var cssReload = require(\"!../../node_modules/_css-hot-loader@1.4.3@css-hot-loader/hotModuleReplacement.js\")(module.id, {\"fileMap\":\"{fileName}\"});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);;\n    }\n  "
+          "source": "// extracted by mini-css-extract-plugin\n    if(module.hot) {\n      // 1548573582603\n      var cssReload = require(\"!../../node_modules/_css-hot-loader@1.4.3@css-hot-loader/hotModuleReplacement.js\")(module.id, {\"fileMap\":\"{fileName}\"});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);;\n    }\n  "
         },
         {
           "id": "",
@@ -545,11 +545,11 @@
           "issuerPath": [
             {
               "id": 1,
-              "identifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+              "identifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
               "name": "./src/js/index.js",
               "profile": {
-                "factory": 297,
-                "building": 528
+                "factory": 69,
+                "building": 411
               }
             },
             {
@@ -557,14 +557,14 @@
               "identifier": "/Users/smzdm/webpack4_test1/node_modules/_css-hot-loader@1.4.3@css-hot-loader/index.js!/Users/smzdm/webpack4_test1/node_modules/_mini-css-extract-plugin@0.5.0@mini-css-extract-plugin/dist/loader.js!/Users/smzdm/webpack4_test1/node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!/Users/smzdm/webpack4_test1/node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js??ref--5-3!/Users/smzdm/webpack4_test1/node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!/Users/smzdm/webpack4_test1/src/css/index.scss",
               "name": "./src/css/index.scss",
               "profile": {
-                "factory": 102,
-                "building": 686
+                "factory": 106,
+                "building": 834
               }
             }
           ],
           "profile": {
-            "factory": 0,
-            "building": 1
+            "factory": 1,
+            "building": 0
           },
           "failed": false,
           "errors": 0,
@@ -602,7 +602,7 @@
   "modules": [
     {
       "id": 0,
-      "identifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/components/test.js",
+      "identifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/components/test.js",
       "name": "./src/js/components/test.js",
       "index": 3,
       "index2": 2,
@@ -614,23 +614,23 @@
       "chunks": [
         0
       ],
-      "issuer": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+      "issuer": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
       "issuerId": 1,
       "issuerName": "./src/js/index.js",
       "issuerPath": [
         {
           "id": 1,
-          "identifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+          "identifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
           "name": "./src/js/index.js",
           "profile": {
-            "factory": 297,
-            "building": 528
+            "factory": 69,
+            "building": 411
           }
         }
       ],
       "profile": {
-        "factory": 102,
-        "building": 686
+        "factory": 106,
+        "building": 834
       },
       "failed": false,
       "errors": 0,
@@ -639,7 +639,7 @@
       "reasons": [
         {
           "moduleId": 1,
-          "moduleIdentifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+          "moduleIdentifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
           "module": "./src/js/index.js",
           "moduleName": "./src/js/index.js",
           "type": "cjs require",
@@ -648,7 +648,7 @@
         },
         {
           "moduleId": 3,
-          "moduleIdentifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/haojia.js",
+          "moduleIdentifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/haojia.js",
           "module": "./src/js/haojia.js",
           "moduleName": "./src/js/haojia.js",
           "type": "cjs require",
@@ -666,7 +666,7 @@
     },
     {
       "id": 1,
-      "identifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+      "identifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
       "name": "./src/js/index.js",
       "index": 0,
       "index2": 3,
@@ -683,8 +683,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 297,
-        "building": 528
+        "factory": 69,
+        "building": 411
       },
       "failed": false,
       "errors": 0,
@@ -723,23 +723,23 @@
       "chunks": [
         3
       ],
-      "issuer": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+      "issuer": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
       "issuerId": 1,
       "issuerName": "./src/js/index.js",
       "issuerPath": [
         {
           "id": 1,
-          "identifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+          "identifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
           "name": "./src/js/index.js",
           "profile": {
-            "factory": 297,
-            "building": 528
+            "factory": 69,
+            "building": 411
           }
         }
       ],
       "profile": {
-        "factory": 102,
-        "building": 686
+        "factory": 106,
+        "building": 834
       },
       "failed": false,
       "errors": 0,
@@ -750,7 +750,7 @@
       "reasons": [
         {
           "moduleId": 1,
-          "moduleIdentifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+          "moduleIdentifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
           "module": "./src/js/index.js",
           "moduleName": "./src/js/index.js",
           "type": "cjs require",
@@ -764,11 +764,11 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 1,
-      "source": "// extracted by mini-css-extract-plugin\n    if(module.hot) {\n      // 1548491892085\n      var cssReload = require(\"!../../node_modules/_css-hot-loader@1.4.3@css-hot-loader/hotModuleReplacement.js\")(module.id, {\"fileMap\":\"{fileName}\"});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);;\n    }\n  "
+      "source": "// extracted by mini-css-extract-plugin\n    if(module.hot) {\n      // 1548573582603\n      var cssReload = require(\"!../../node_modules/_css-hot-loader@1.4.3@css-hot-loader/hotModuleReplacement.js\")(module.id, {\"fileMap\":\"{fileName}\"});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);;\n    }\n  "
     },
     {
       "id": 3,
-      "identifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/haojia.js",
+      "identifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/haojia.js",
       "name": "./src/js/haojia.js",
       "index": 4,
       "index2": 4,
@@ -785,9 +785,9 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 346,
-        "building": 539,
-        "dependencies": 19
+        "factory": 88,
+        "building": 395,
+        "dependencies": 72
       },
       "failed": false,
       "errors": 0,
@@ -831,11 +831,11 @@
       "issuerPath": [
         {
           "id": 1,
-          "identifier": "/Users/smzdm/webpack4_test1/node_modules/_babel-loader@8.0.5@babel-loader/lib/index.js!/Users/smzdm/webpack4_test1/src/js/index.js",
+          "identifier": "/Users/smzdm/webpack4_test1/node_modules/_happypack@5.0.1@happypack/loader.js?id=jsbabel!/Users/smzdm/webpack4_test1/src/js/index.js",
           "name": "./src/js/index.js",
           "profile": {
-            "factory": 297,
-            "building": 528
+            "factory": 69,
+            "building": 411
           }
         },
         {
@@ -843,14 +843,14 @@
           "identifier": "/Users/smzdm/webpack4_test1/node_modules/_css-hot-loader@1.4.3@css-hot-loader/index.js!/Users/smzdm/webpack4_test1/node_modules/_mini-css-extract-plugin@0.5.0@mini-css-extract-plugin/dist/loader.js!/Users/smzdm/webpack4_test1/node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!/Users/smzdm/webpack4_test1/node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js??ref--5-3!/Users/smzdm/webpack4_test1/node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!/Users/smzdm/webpack4_test1/src/css/index.scss",
           "name": "./src/css/index.scss",
           "profile": {
-            "factory": 102,
-            "building": 686
+            "factory": 106,
+            "building": 834
           }
         }
       ],
       "profile": {
-        "factory": 0,
-        "building": 1
+        "factory": 1,
+        "building": 0
       },
       "failed": false,
       "errors": 0,
@@ -927,7 +927,7 @@
           "files": [
             "page/haojia.html"
           ],
-          "hash": "eb47c1cf47b46e9946fe",
+          "hash": "9205a44cd5da5680fc74",
           "siblings": [],
           "parents": [],
           "children": [],
@@ -952,8 +952,8 @@
               "issuerName": null,
               "issuerPath": null,
               "profile": {
-                "factory": 297,
-                "building": 592
+                "factory": 466,
+                "building": 82
               },
               "failed": false,
               "errors": 0,
@@ -1011,8 +1011,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 297,
-            "building": 592
+            "factory": 466,
+            "building": 82
           },
           "failed": false,
           "errors": 0,
@@ -1094,7 +1094,7 @@
           "files": [
             "page/index.html"
           ],
-          "hash": "ee6ec2027c1ce3a50f8e",
+          "hash": "2d9dcd38ad8c6298c988",
           "siblings": [],
           "parents": [],
           "children": [],
@@ -1119,8 +1119,8 @@
               "issuerName": null,
               "issuerPath": null,
               "profile": {
-                "factory": 127,
-                "building": 734
+                "factory": 137,
+                "building": 382
               },
               "failed": false,
               "errors": 0,
@@ -1178,8 +1178,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 127,
-            "building": 734
+            "factory": 137,
+            "building": 382
           },
           "failed": false,
           "errors": 0,
@@ -1253,7 +1253,7 @@
           "files": [
             "*"
           ],
-          "hash": "46a3336661c24f10c304",
+          "hash": "d3dbe896ae8c18be4512",
           "siblings": [],
           "parents": [],
           "children": [],
@@ -1278,8 +1278,8 @@
               "issuerName": null,
               "issuerPath": null,
               "profile": {
-                "factory": 4,
-                "building": 594
+                "factory": 13,
+                "building": 657
               },
               "failed": false,
               "errors": 0,
@@ -1327,14 +1327,14 @@
                   "identifier": "/Users/smzdm/webpack4_test1/node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!/Users/smzdm/webpack4_test1/node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js??ref--5-3!/Users/smzdm/webpack4_test1/node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!/Users/smzdm/webpack4_test1/src/css/index.scss",
                   "name": "./node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--5-3!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/css/index.scss",
                   "profile": {
-                    "factory": 4,
-                    "building": 594
+                    "factory": 13,
+                    "building": 657
                   }
                 }
               ],
               "profile": {
-                "factory": 18,
-                "building": 18
+                "factory": 118,
+                "building": 23
               },
               "failed": false,
               "errors": 0,
@@ -1382,14 +1382,14 @@
                   "identifier": "/Users/smzdm/webpack4_test1/node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!/Users/smzdm/webpack4_test1/node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js??ref--5-3!/Users/smzdm/webpack4_test1/node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!/Users/smzdm/webpack4_test1/src/css/index.scss",
                   "name": "./node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--5-3!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/css/index.scss",
                   "profile": {
-                    "factory": 4,
-                    "building": 594
+                    "factory": 13,
+                    "building": 657
                   }
                 }
               ],
               "profile": {
-                "factory": 18,
-                "building": 18
+                "factory": 118,
+                "building": 23
               },
               "failed": false,
               "errors": 0,
@@ -1437,14 +1437,14 @@
                   "identifier": "/Users/smzdm/webpack4_test1/node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!/Users/smzdm/webpack4_test1/node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js??ref--5-3!/Users/smzdm/webpack4_test1/node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!/Users/smzdm/webpack4_test1/src/css/index.scss",
                   "name": "./node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--5-3!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/css/index.scss",
                   "profile": {
-                    "factory": 4,
-                    "building": 594
+                    "factory": 13,
+                    "building": 657
                   }
                 }
               ],
               "profile": {
-                "factory": 18,
-                "building": 18
+                "factory": 118,
+                "building": 23
               },
               "failed": false,
               "errors": 0,
@@ -1503,8 +1503,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 4,
-            "building": 594
+            "factory": 13,
+            "building": 657
           },
           "failed": false,
           "errors": 0,
@@ -1552,14 +1552,14 @@
               "identifier": "/Users/smzdm/webpack4_test1/node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!/Users/smzdm/webpack4_test1/node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js??ref--5-3!/Users/smzdm/webpack4_test1/node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!/Users/smzdm/webpack4_test1/src/css/index.scss",
               "name": "./node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--5-3!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/css/index.scss",
               "profile": {
-                "factory": 4,
-                "building": 594
+                "factory": 13,
+                "building": 657
               }
             }
           ],
           "profile": {
-            "factory": 18,
-            "building": 18
+            "factory": 118,
+            "building": 23
           },
           "failed": false,
           "errors": 0,
@@ -1607,14 +1607,14 @@
               "identifier": "/Users/smzdm/webpack4_test1/node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!/Users/smzdm/webpack4_test1/node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js??ref--5-3!/Users/smzdm/webpack4_test1/node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!/Users/smzdm/webpack4_test1/src/css/index.scss",
               "name": "./node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--5-3!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/css/index.scss",
               "profile": {
-                "factory": 4,
-                "building": 594
+                "factory": 13,
+                "building": 657
               }
             }
           ],
           "profile": {
-            "factory": 18,
-            "building": 18
+            "factory": 118,
+            "building": 23
           },
           "failed": false,
           "errors": 0,
@@ -1662,14 +1662,14 @@
               "identifier": "/Users/smzdm/webpack4_test1/node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!/Users/smzdm/webpack4_test1/node_modules/_postcss-loader@3.0.0@postcss-loader/src/index.js??ref--5-3!/Users/smzdm/webpack4_test1/node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!/Users/smzdm/webpack4_test1/src/css/index.scss",
               "name": "./node_modules/_css-loader@2.1.0@css-loader/dist/cjs.js!./node_modules/_postcss-loader@3.0.0@postcss-loader/src??ref--5-3!./node_modules/_sass-loader@7.1.0@sass-loader/lib/loader.js!./src/css/index.scss",
               "profile": {
-                "factory": 4,
-                "building": 594
+                "factory": 13,
+                "building": 657
               }
             }
           ],
           "profile": {
-            "factory": 18,
-            "building": 18
+            "factory": 118,
+            "building": 23
           },
           "failed": false,
           "errors": 0,

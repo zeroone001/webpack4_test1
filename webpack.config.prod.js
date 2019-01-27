@@ -1,12 +1,17 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 const argv = require('yargs').argv;
 const CopyWebpackPlugin = require('copy-webpack-plugin');       
-const WebpackManifestPlugin = require('webpack-manifest-plugin');                
+const WebpackManifestPlugin = require('webpack-manifest-plugin');    
+const HappyPack = require('happypack');           
+const os = require('os'); 
+const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
 
 const resolvePath = (_src) => {
     return path.resolve(__dirname, './', _src);
@@ -34,7 +39,7 @@ module.exports = {
         minimizer: [
             // new OptimizeCssAssetsPlugin({})
             // new UglifyJsPlugin()，这个插件我们可以在optimize中配置，效果是一样的
-            new UglifyJsPlugin({
+            /*new UglifyJsPlugin({
                 test: /\.js(\?.*)?$/i,
                 cache: true,
                 // 使用多进程并行运行来提高构建速度。默认并发运行数
@@ -47,10 +52,28 @@ module.exports = {
                         unused: false
                     }
                 }
-                
-                // sourceMap: true // set to true if you want JS source maps
+            })*/
+            new ParallelUglifyPlugin({
+                uglifyJS: {
+                    output: {
+                      // 最紧凑的输出
+                      beautify: false,
+                      // 删除所有的注释
+                      comments: false,
+                    },
+                    compress: {
+                      // 在UglifyJs删除没有用到的代码时不输出警告
+                      warnings: false,
+                      // 删除所有的 `console` 语句，可以兼容ie浏览器
+                      drop_console: true,
+                      // 内嵌定义了但是只用到一次的变量
+                      collapse_vars: true,
+                      // 提取出出现多次但是没有定义成变量去引用的静态值
+                      reduce_vars: true,
+                      unused: false
+                    }
+                },
             })
-
         ],
         // webpack4移除了CommonsChunkPlugin插件，取而代之的是splitChunks
         splitChunks: {
@@ -96,12 +119,17 @@ module.exports = {
     },
     module: {
         rules: [
+            // {
+            //     test: /\.js$/,
+            //     exclude: /node_modules/,
+            //     use: {
+            //         loader: "babel-loader"
+            //     }
+            // },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader"
-                }
+                use: 'happypack/loader?id=jsbabel'
             },
             {
                 test: /\.(c|sa|sc)ss$/,
@@ -190,7 +218,13 @@ module.exports = {
             filename: resolvePath('dist/page/haojia.html'),
             chunks: ['manifest','commons','haojia'],
             chunksSortMode: 'dependency'
-        })
+        }),
+        new HappyPack({
+            id: 'jsbabel',
+            loaders: ['babel-loader?cacheDirectory=true'],
+            threadPool: happyThreadPool
+            // verbose: true 默认就是true不需要加
+        }),
         
 
     ]
