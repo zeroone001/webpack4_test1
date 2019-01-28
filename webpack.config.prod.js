@@ -16,6 +16,8 @@ const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
 const resolvePath = (_src) => {
     return path.resolve(__dirname, './', _src);
 }
+const resolve = dir => path.join(__dirname, './', dir);
+// console.log('resolve:', resolve('src'));
 let _mode = argv.mode === 'production'
 module.exports = {
     entry: {
@@ -39,7 +41,7 @@ module.exports = {
         minimizer: [
             // new OptimizeCssAssetsPlugin({})
             // new UglifyJsPlugin()，这个插件我们可以在optimize中配置，效果是一样的
-            /*new UglifyJsPlugin({
+            new UglifyJsPlugin({
                 test: /\.js(\?.*)?$/i,
                 cache: true,
                 // 使用多进程并行运行来提高构建速度。默认并发运行数
@@ -52,8 +54,8 @@ module.exports = {
                         unused: false
                     }
                 }
-            })*/
-            new ParallelUglifyPlugin({
+            })
+            /*new ParallelUglifyPlugin({
                 uglifyJS: {
                     output: {
                       // 最紧凑的输出
@@ -73,7 +75,7 @@ module.exports = {
                       unused: false
                     }
                 },
-            })
+            })*/
         ],
         // webpack4移除了CommonsChunkPlugin插件，取而代之的是splitChunks
         splitChunks: {
@@ -115,7 +117,11 @@ module.exports = {
             css: resolvePath('src/css'),
             img: resolvePath('src/img')
         },
-        extensions: ['.js', '.json', '.css']
+        extensions: ['.js', '.json', '.css'],
+        modules: [
+            resolve('src'),
+            resolve('node_modules')
+        ]
     },
     module: {
         rules: [

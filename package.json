@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --config ./webpack.config.js",
-    "build": "rm -rf dist && webpack  --config ./webpack.config.prod.js --progress --mode=production --profile --json > stats.json ",
+    "build": "rm -rf dist && webpack  --config ./webpack.config.prod.js --progress --mode=production",
     "build:debug": "rm -rf dist && webpack --config ./webpack.config.prod.js --progress --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
