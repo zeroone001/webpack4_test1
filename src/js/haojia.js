@@ -1,3 +1,4 @@
 // require('css/index.scss');
 require('js/components/test.js');
-console.log('haojia, test.js');
+let _test = 'haojia, test.js';
+console.log(_test);

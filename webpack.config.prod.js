@@ -11,7 +11,7 @@ const HappyPack = require('happypack');
 const os = require('os'); 
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
+// const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
 
 const resolvePath = (_src) => {
     return path.resolve(__dirname, './', _src);
@@ -132,11 +132,7 @@ module.exports = {
             //         loader: "babel-loader"
             //     }
             // },
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: 'happypack/loader?id=jsbabel'
-            },
+            
             {
                 test: /\.(c|sa|sc)ss$/,
                 exclude: /node_modules/,
@@ -182,6 +178,11 @@ module.exports = {
                     }
                 ]
 
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'happypack/loader?id=jsbabel'
             }
         ]
     },
@@ -227,7 +228,10 @@ module.exports = {
         }),
         new HappyPack({
             id: 'jsbabel',
-            loaders: ['babel-loader?cacheDirectory=true'],
+            loaders: [
+            {
+                loader: 'babel-loader?cacheDirectory=true'
+            }],
             threadPool: happyThreadPool
             // verbose: true 默认就是true不需要加
         }),
