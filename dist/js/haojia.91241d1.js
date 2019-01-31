@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{3:function(n,o,w){w(0);var a="haojia, test.js"}},[[3,1,0]]]);

@@ -18,8 +18,8 @@ const resolvePath = (_src) => {
 }
 const resolve = dir => path.join(__dirname, './', dir);
 // console.log('resolve:', resolve('src'));
-let _mode = argv.mode === 'production'
-module.exports = {
+let idProduction = argv.mode === 'production';
+let prodConfig = {
     entry: {
         index: './src/js/index.js',
         haojia: './src/js/haojia.js'
@@ -29,32 +29,17 @@ module.exports = {
         filename: 'js/[name].[chunkhash:7].js',
         publicPath: '../'
     }, 
-    devtool: _mode ? '' : 'source-map',
+    devtool: idProduction ? '' : 'source-map',
     stats: {
         colors: true
     },
-    mode: "production",
     // 新的公共代码抽取工具
     // uglifyjs-webpack-plugin 是依赖于uglify-js@3 的，compress配置可以在这里查到
     // uglifyjs-webpack-plugin 里面有些配置写的不是很清楚 
     optimization: {
         minimizer: [
             // new OptimizeCssAssetsPlugin({})
-            // new UglifyJsPlugin()，这个插件我们可以在optimize中配置，效果是一样的
-            new UglifyJsPlugin({
-                test: /\.js(\?.*)?$/i,
-                cache: true,
-                // 使用多进程并行运行来提高构建速度。默认并发运行数
-                parallel: true,
-                uglifyOptions: {
-                    compress:{
-                        drop_console: true,
-                        drop_debugger: true, // 默认就是true
-                        // 已经压缩过的代码，不再压缩，特别是echarts
-                        unused: false
-                    }
-                }
-            })
+            
             /*new ParallelUglifyPlugin({
                 uglifyJS: {
                     output: {
@@ -193,8 +178,7 @@ module.exports = {
         }),
         // 压缩CSS
         new OptimizeCssAssetsPlugin({
-            // 这个不加也可以，默认就是这个
-            assetNameRegExp: /\.css$/g,
+            assetNameRegExp: /\.css$/g, // 这个不加也可以，默认就是这个
             cssProcessor: require('cssnano'),
             cssProcessorPluginOptions: {
                 preset: ['default', { discardComments: { removeAll: true } }],
@@ -238,4 +222,25 @@ module.exports = {
         
 
     ]
+};
+if (idProduction) {
+    prodConfig.optimization.minimizer = [
+        // new UglifyJsPlugin()，这个插件我们可以在optimize中配置，效果是一样的
+        new UglifyJsPlugin({
+            test: /\.js(\?.*)?$/i,
+            cache: true,
+            // 使用多进程并行运行来提高构建速度。默认并发运行数
+            parallel: true,
+            uglifyOptions: {
+                compress:{
+                    drop_console: true,
+                    drop_debugger: true, // 默认就是true
+                    // 已经压缩过的代码，不再压缩，特别是echarts
+                    unused: false
+                }
+            }
+        })
+    ];
 }
+
+module.exports = prodConfig;

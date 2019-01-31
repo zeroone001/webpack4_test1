@@ -1,7 +1,11 @@
 {
-  "commons.js": "js/commons.8474153.js",
-  "manifest.js": "js/manifest.d72142d.js",
-  "haojia.js": "js/haojia.91241d1.js",
-  "index.css": "css/index.db89ed7.css",
-  "index.js": "js/index.adc8f04.js"
+  "commons.js": "js/commons.95c06f5.js",
+  "commons.js.map": "js/commons.95c06f5.js.map",
+  "haojia.js": "js/haojia.f121a7e.js",
+  "haojia.js.map": "js/haojia.f121a7e.js.map",
+  "index.css": "css/index.049a3d9.css",
+  "index.js": "js/index.e4a320a.js",
+  "index.js.map": "js/index.e4a320a.js.map",
+  "manifest.js": "js/manifest.961b47e.js",
+  "manifest.js.map": "js/manifest.961b47e.js.map"
 }

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/js/components/test.js"],"names":["console","log"],"mappings":";;;;;;;;;;;;AAAAA,OAAO,CAACC,GAAR,CAAY,oBAAZ,E","file":"js/commons.95c06f5.js","sourcesContent":["console.log('test aaa commonsss');\n"],"sourceRoot":""}
